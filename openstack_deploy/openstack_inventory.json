@@ -1,0 +1,1513 @@
+{
+    "_meta": {
+        "hostvars": {
+            "loc-cmp": {
+                "ansible_ssh_host": "192.168.122.182", 
+                "component": "nova_compute", 
+                "container_address": "192.168.122.182", 
+                "container_name": "loc-cmp", 
+                "container_networks": {
+                    "container_address": {
+                        "address": "192.168.122.182", 
+                        "bridge": "br-mgmt", 
+                        "netmask": "255.255.255.0", 
+                        "type": "veth"
+                    }, 
+                    "eth12_address": {
+                        "bridge": "br-vlan", 
+                        "netmask": null, 
+                        "type": "veth"
+                    }, 
+                    "storage_address": {
+                        "bridge": "br-storage", 
+                        "mtu": "9000", 
+                        "netmask": "255.255.252.0", 
+                        "type": "veth"
+                    }, 
+                    "tunnel_address": {
+                        "bridge": "br-vxlan", 
+                        "mtu": "9000", 
+                        "netmask": "255.255.255.0", 
+                        "type": "veth"
+                    }
+                }, 
+                "container_types": "loc-cmp_containers", 
+                "is_metal": true, 
+                "physical_host": "loc-cmp", 
+                "physical_host_group": "compute_hosts", 
+                "properties": {
+                    "container_release": "trusty", 
+                    "is_metal": true, 
+                    "service_name": "nova"
+                }
+            }, 
+            "loc-cntl": {
+                "ansible_ssh_host": "192.168.122.181", 
+                "component": "haproxy", 
+                "container_address": "192.168.122.181", 
+                "container_name": "loc-cntl", 
+                "container_networks": {
+                    "container_address": {
+                        "address": "192.168.122.181", 
+                        "bridge": "br-mgmt", 
+                        "netmask": "255.255.255.0", 
+                        "type": "veth"
+                    }
+                }, 
+                "container_types": "loc-cntl_containers", 
+                "is_metal": true, 
+                "physical_host": "loc-cntl", 
+                "physical_host_group": "haproxy_hosts", 
+                "properties": {
+                    "is_metal": true, 
+                    "service_name": "haproxy"
+                }
+            }, 
+            "loc-cntl_cinder_api_container-283559f3": {
+                "ansible_ssh_host": "192.168.122.229", 
+                "component": "cinder_api", 
+                "container_address": "192.168.122.229", 
+                "container_name": "loc-cntl_cinder_api_container-283559f3", 
+                "container_networks": {
+                    "container_address": {
+                        "address": "192.168.122.229", 
+                        "bridge": "br-mgmt", 
+                        "interface": "eth1", 
+                        "netmask": "255.255.255.0", 
+                        "type": "veth"
+                    }, 
+                    "storage_address": {
+                        "address": "172.29.245.22", 
+                        "bridge": "br-storage", 
+                        "interface": "eth2", 
+                        "mtu": "9000", 
+                        "netmask": "255.255.252.0", 
+                        "type": "veth"
+                    }
+                }, 
+                "physical_host": "loc-cntl", 
+                "physical_host_group": "storage-infra_hosts", 
+                "properties": {
+                    "container_release": "trusty", 
+                    "service_name": "cinder"
+                }
+            }, 
+            "loc-cntl_cinder_scheduler_container-6697b0b4": {
+                "ansible_ssh_host": "192.168.122.250", 
+                "component": "cinder_scheduler", 
+                "container_address": "192.168.122.250", 
+                "container_name": "loc-cntl_cinder_scheduler_container-6697b0b4", 
+                "container_networks": {
+                    "container_address": {
+                        "address": "192.168.122.250", 
+                        "bridge": "br-mgmt", 
+                        "interface": "eth1", 
+                        "netmask": "255.255.255.0", 
+                        "type": "veth"
+                    }
+                }, 
+                "physical_host": "loc-cntl", 
+                "physical_host_group": "storage-infra_hosts", 
+                "properties": {
+                    "container_release": "trusty", 
+                    "service_name": "cinder"
+                }
+            }, 
+            "loc-cntl_galera_container-33501562": {
+                "ansible_ssh_host": "192.168.122.253", 
+                "component": "galera", 
+                "container_address": "192.168.122.253", 
+                "container_name": "loc-cntl_galera_container-33501562", 
+                "container_networks": {
+                    "container_address": {
+                        "address": "192.168.122.253", 
+                        "bridge": "br-mgmt", 
+                        "interface": "eth1", 
+                        "netmask": "255.255.255.0", 
+                        "type": "veth"
+                    }
+                }, 
+                "physical_host": "loc-cntl", 
+                "physical_host_group": "shared-infra_hosts", 
+                "properties": {
+                    "container_release": "trusty", 
+                    "log_directory": "mysql_logs", 
+                    "service_name": "galera"
+                }
+            }, 
+            "loc-cntl_glance_container-a6e85be3": {
+                "ansible_ssh_host": "192.168.122.233", 
+                "component": "glance_api", 
+                "container_address": "192.168.122.233", 
+                "container_name": "loc-cntl_glance_container-a6e85be3", 
+                "container_networks": {
+                    "container_address": {
+                        "address": "192.168.122.233", 
+                        "bridge": "br-mgmt", 
+                        "interface": "eth1", 
+                        "netmask": "255.255.255.0", 
+                        "type": "veth"
+                    }, 
+                    "storage_address": {
+                        "address": "172.29.247.159", 
+                        "bridge": "br-storage", 
+                        "interface": "eth2", 
+                        "mtu": "9000", 
+                        "netmask": "255.255.252.0", 
+                        "type": "veth"
+                    }
+                }, 
+                "physical_host": "loc-cntl", 
+                "physical_host_group": "os-infra_hosts", 
+                "properties": {
+                    "container_fs_size": "12G", 
+                    "container_release": "trusty", 
+                    "service_name": "glance"
+                }
+            }, 
+            "loc-cntl_heat_apis_container-ef78782b": {
+                "ansible_ssh_host": "192.168.122.200", 
+                "component": "heat_api_cloudwatch", 
+                "container_address": "192.168.122.200", 
+                "container_name": "loc-cntl_heat_apis_container-ef78782b", 
+                "container_networks": {
+                    "container_address": {
+                        "address": "192.168.122.200", 
+                        "bridge": "br-mgmt", 
+                        "interface": "eth1", 
+                        "netmask": "255.255.255.0", 
+                        "type": "veth"
+                    }
+                }, 
+                "physical_host": "loc-cntl", 
+                "physical_host_group": "os-infra_hosts", 
+                "properties": {
+                    "container_release": "trusty", 
+                    "service_name": "heat"
+                }
+            }, 
+            "loc-cntl_heat_engine_container-52c07992": {
+                "ansible_ssh_host": "192.168.122.219", 
+                "component": "heat_engine", 
+                "container_address": "192.168.122.219", 
+                "container_name": "loc-cntl_heat_engine_container-52c07992", 
+                "container_networks": {
+                    "container_address": {
+                        "address": "192.168.122.219", 
+                        "bridge": "br-mgmt", 
+                        "interface": "eth1", 
+                        "netmask": "255.255.255.0", 
+                        "type": "veth"
+                    }
+                }, 
+                "physical_host": "loc-cntl", 
+                "physical_host_group": "os-infra_hosts", 
+                "properties": {
+                    "container_release": "trusty", 
+                    "service_name": "heat"
+                }
+            }, 
+            "loc-cntl_horizon_container-c8a6fa25": {
+                "ansible_ssh_host": "192.168.122.231", 
+                "component": "horizon", 
+                "container_address": "192.168.122.231", 
+                "container_name": "loc-cntl_horizon_container-c8a6fa25", 
+                "container_networks": {
+                    "container_address": {
+                        "address": "192.168.122.231", 
+                        "bridge": "br-mgmt", 
+                        "interface": "eth1", 
+                        "netmask": "255.255.255.0", 
+                        "type": "veth"
+                    }
+                }, 
+                "physical_host": "loc-cntl", 
+                "physical_host_group": "os-infra_hosts", 
+                "properties": {
+                    "container_release": "trusty", 
+                    "service_name": "horizon"
+                }
+            }, 
+            "loc-cntl_keystone_container-ce993ac7": {
+                "ansible_ssh_host": "192.168.122.195", 
+                "component": "keystone", 
+                "container_address": "192.168.122.195", 
+                "container_name": "loc-cntl_keystone_container-ce993ac7", 
+                "container_networks": {
+                    "container_address": {
+                        "address": "192.168.122.195", 
+                        "bridge": "br-mgmt", 
+                        "interface": "eth1", 
+                        "netmask": "255.255.255.0", 
+                        "type": "veth"
+                    }
+                }, 
+                "physical_host": "loc-cntl", 
+                "physical_host_group": "identity_hosts", 
+                "properties": {
+                    "container_release": "trusty", 
+                    "service_name": "keystone"
+                }
+            }, 
+            "loc-cntl_memcached_container-6ed71242": {
+                "ansible_ssh_host": "192.168.122.218", 
+                "component": "memcached", 
+                "container_address": "192.168.122.218", 
+                "container_name": "loc-cntl_memcached_container-6ed71242", 
+                "container_networks": {
+                    "container_address": {
+                        "address": "192.168.122.218", 
+                        "bridge": "br-mgmt", 
+                        "interface": "eth1", 
+                        "netmask": "255.255.255.0", 
+                        "type": "veth"
+                    }
+                }, 
+                "physical_host": "loc-cntl", 
+                "physical_host_group": "shared-infra_hosts", 
+                "properties": {
+                    "container_release": "trusty", 
+                    "service_name": "memcached"
+                }
+            }, 
+            "loc-cntl_neutron_agents_container-62559f3c": {
+                "ansible_ssh_host": "192.168.122.224", 
+                "component": "neutron_agent", 
+                "container_address": "192.168.122.224", 
+                "container_name": "loc-cntl_neutron_agents_container-62559f3c", 
+                "container_networks": {
+                    "container_address": {
+                        "address": "192.168.122.224", 
+                        "bridge": "br-mgmt", 
+                        "interface": "eth1", 
+                        "netmask": "255.255.255.0", 
+                        "type": "veth"
+                    }, 
+                    "eth12_address": {
+                        "bridge": "br-vlan", 
+                        "interface": "eth12", 
+                        "netmask": null, 
+                        "type": "veth"
+                    }, 
+                    "tunnel_address": {
+                        "address": "192.168.2.234", 
+                        "bridge": "br-vxlan", 
+                        "interface": "eth10", 
+                        "mtu": "9000", 
+                        "netmask": "255.255.255.0", 
+                        "type": "veth"
+                    }
+                }, 
+                "physical_host": "loc-cntl", 
+                "physical_host_group": "network_hosts", 
+                "properties": {
+                    "container_release": "trusty", 
+                    "service_name": "neutron"
+                }
+            }, 
+            "loc-cntl_neutron_server_container-384340bb": {
+                "ansible_ssh_host": "192.168.122.232", 
+                "component": "neutron_server", 
+                "container_address": "192.168.122.232", 
+                "container_name": "loc-cntl_neutron_server_container-384340bb", 
+                "container_networks": {
+                    "container_address": {
+                        "address": "192.168.122.232", 
+                        "bridge": "br-mgmt", 
+                        "interface": "eth1", 
+                        "netmask": "255.255.255.0", 
+                        "type": "veth"
+                    }
+                }, 
+                "physical_host": "loc-cntl", 
+                "physical_host_group": "network_hosts", 
+                "properties": {
+                    "container_release": "trusty", 
+                    "service_name": "neutron"
+                }
+            }, 
+            "loc-cntl_nova_api_metadata_container-5ca03db3": {
+                "ansible_ssh_host": "192.168.122.213", 
+                "component": "nova_api_metadata", 
+                "container_address": "192.168.122.213", 
+                "container_name": "loc-cntl_nova_api_metadata_container-5ca03db3", 
+                "container_networks": {
+                    "container_address": {
+                        "address": "192.168.122.213", 
+                        "bridge": "br-mgmt", 
+                        "interface": "eth1", 
+                        "netmask": "255.255.255.0", 
+                        "type": "veth"
+                    }
+                }, 
+                "physical_host": "loc-cntl", 
+                "physical_host_group": "os-infra_hosts", 
+                "properties": {
+                    "container_release": "trusty", 
+                    "service_name": "nova"
+                }
+            }, 
+            "loc-cntl_nova_api_os_compute_container-91aebb3c": {
+                "ansible_ssh_host": "192.168.122.212", 
+                "component": "nova_api_os_compute", 
+                "container_address": "192.168.122.212", 
+                "container_name": "loc-cntl_nova_api_os_compute_container-91aebb3c", 
+                "container_networks": {
+                    "container_address": {
+                        "address": "192.168.122.212", 
+                        "bridge": "br-mgmt", 
+                        "interface": "eth1", 
+                        "netmask": "255.255.255.0", 
+                        "type": "veth"
+                    }
+                }, 
+                "physical_host": "loc-cntl", 
+                "physical_host_group": "os-infra_hosts", 
+                "properties": {
+                    "container_release": "trusty", 
+                    "service_name": "nova"
+                }
+            }, 
+            "loc-cntl_nova_cert_container-27cc0f1e": {
+                "ansible_ssh_host": "192.168.122.191", 
+                "component": "nova_cert", 
+                "container_address": "192.168.122.191", 
+                "container_name": "loc-cntl_nova_cert_container-27cc0f1e", 
+                "container_networks": {
+                    "container_address": {
+                        "address": "192.168.122.191", 
+                        "bridge": "br-mgmt", 
+                        "interface": "eth1", 
+                        "netmask": "255.255.255.0", 
+                        "type": "veth"
+                    }
+                }, 
+                "physical_host": "loc-cntl", 
+                "physical_host_group": "os-infra_hosts", 
+                "properties": {
+                    "container_release": "trusty", 
+                    "service_name": "nova"
+                }
+            }, 
+            "loc-cntl_nova_conductor_container-b7477f30": {
+                "ansible_ssh_host": "192.168.122.201", 
+                "component": "nova_conductor", 
+                "container_address": "192.168.122.201", 
+                "container_name": "loc-cntl_nova_conductor_container-b7477f30", 
+                "container_networks": {
+                    "container_address": {
+                        "address": "192.168.122.201", 
+                        "bridge": "br-mgmt", 
+                        "interface": "eth1", 
+                        "netmask": "255.255.255.0", 
+                        "type": "veth"
+                    }
+                }, 
+                "physical_host": "loc-cntl", 
+                "physical_host_group": "os-infra_hosts", 
+                "properties": {
+                    "container_release": "trusty", 
+                    "service_name": "nova"
+                }
+            }, 
+            "loc-cntl_nova_console_container-536ee83d": {
+                "ansible_ssh_host": "192.168.122.225", 
+                "component": "nova_console", 
+                "container_address": "192.168.122.225", 
+                "container_name": "loc-cntl_nova_console_container-536ee83d", 
+                "container_networks": {
+                    "container_address": {
+                        "address": "192.168.122.225", 
+                        "bridge": "br-mgmt", 
+                        "interface": "eth1", 
+                        "netmask": "255.255.255.0", 
+                        "type": "veth"
+                    }
+                }, 
+                "physical_host": "loc-cntl", 
+                "physical_host_group": "os-infra_hosts", 
+                "properties": {
+                    "container_release": "trusty", 
+                    "service_name": "nova"
+                }
+            }, 
+            "loc-cntl_nova_scheduler_container-053ab198": {
+                "ansible_ssh_host": "192.168.122.238", 
+                "component": "nova_scheduler", 
+                "container_address": "192.168.122.238", 
+                "container_name": "loc-cntl_nova_scheduler_container-053ab198", 
+                "container_networks": {
+                    "container_address": {
+                        "address": "192.168.122.238", 
+                        "bridge": "br-mgmt", 
+                        "interface": "eth1", 
+                        "netmask": "255.255.255.0", 
+                        "type": "veth"
+                    }
+                }, 
+                "physical_host": "loc-cntl", 
+                "physical_host_group": "os-infra_hosts", 
+                "properties": {
+                    "container_release": "trusty", 
+                    "service_name": "nova"
+                }
+            }, 
+            "loc-cntl_rabbit_mq_container-84c7f2f5": {
+                "ansible_ssh_host": "192.168.122.248", 
+                "component": "rabbitmq", 
+                "container_address": "192.168.122.248", 
+                "container_name": "loc-cntl_rabbit_mq_container-84c7f2f5", 
+                "container_networks": {
+                    "container_address": {
+                        "address": "192.168.122.248", 
+                        "bridge": "br-mgmt", 
+                        "interface": "eth1", 
+                        "netmask": "255.255.255.0", 
+                        "type": "veth"
+                    }
+                }, 
+                "physical_host": "loc-cntl", 
+                "physical_host_group": "shared-infra_hosts", 
+                "properties": {
+                    "container_release": "trusty", 
+                    "service_name": "rabbitmq"
+                }
+            }, 
+            "loc-cntl_repo_container-80a259dd": {
+                "ansible_ssh_host": "192.168.122.234", 
+                "component": "pkg_repo", 
+                "container_address": "192.168.122.234", 
+                "container_name": "loc-cntl_repo_container-80a259dd", 
+                "container_networks": {
+                    "container_address": {
+                        "address": "192.168.122.234", 
+                        "bridge": "br-mgmt", 
+                        "interface": "eth1", 
+                        "netmask": "255.255.255.0", 
+                        "type": "veth"
+                    }
+                }, 
+                "physical_host": "loc-cntl", 
+                "physical_host_group": "repo-infra_hosts", 
+                "properties": {
+                    "container_release": "trusty", 
+                    "service_name": "repo"
+                }
+            }, 
+            "loc-cntl_rsyslog_container-ba0ebdb9": {
+                "ansible_ssh_host": "192.168.122.209", 
+                "component": "rsyslog", 
+                "container_address": "192.168.122.209", 
+                "container_name": "loc-cntl_rsyslog_container-ba0ebdb9", 
+                "container_networks": {
+                    "container_address": {
+                        "address": "192.168.122.209", 
+                        "bridge": "br-mgmt", 
+                        "interface": "eth1", 
+                        "netmask": "255.255.255.0", 
+                        "type": "veth"
+                    }
+                }, 
+                "physical_host": "loc-cntl", 
+                "physical_host_group": "log_hosts", 
+                "properties": {
+                    "container_release": "trusty", 
+                    "service_name": "rsyslog"
+                }
+            }, 
+            "loc-cntl_utility_container-75303553": {
+                "ansible_ssh_host": "192.168.122.236", 
+                "component": "utility", 
+                "container_address": "192.168.122.236", 
+                "container_name": "loc-cntl_utility_container-75303553", 
+                "container_networks": {
+                    "container_address": {
+                        "address": "192.168.122.236", 
+                        "bridge": "br-mgmt", 
+                        "interface": "eth1", 
+                        "netmask": "255.255.255.0", 
+                        "type": "veth"
+                    }
+                }, 
+                "physical_host": "loc-cntl", 
+                "physical_host_group": "shared-infra_hosts", 
+                "properties": {
+                    "container_release": "trusty", 
+                    "service_name": "utility"
+                }
+            }
+        }
+    }, 
+    "all": {
+        "vars": {
+            "container_cidr": "192.168.122.0/24", 
+            "external_lb_vip_address": "192.168.122.187", 
+            "galera_package_download_validate_certs": "no", 
+            "global_environment_variables": {
+                "LANG": "en_US.UTF-8", 
+                "LANGUAGE": "en_US.UTF-8", 
+                "LC_ALL": "en_US.UTF-8"
+            }, 
+            "internal_lb_vip_address": "192.168.122.187", 
+            "management_bridge": "br-mgmt", 
+            "pip_validate_certs": "no", 
+            "provider_networks": [
+                {
+                    "network": {
+                        "container_bridge": "br-mgmt", 
+                        "container_interface": "eth1", 
+                        "container_type": "veth", 
+                        "group_binds": [
+                            "all_containers", 
+                            "hosts"
+                        ], 
+                        "ip_from_q": "container", 
+                        "is_container_address": true, 
+                        "is_ssh_address": true, 
+                        "type": "raw"
+                    }
+                }, 
+                {
+                    "network": {
+                        "container_bridge": "br-vxlan", 
+                        "container_interface": "eth10", 
+                        "container_mtu": "9000", 
+                        "container_type": "veth", 
+                        "group_binds": [
+                            "neutron_linuxbridge_agent"
+                        ], 
+                        "ip_from_q": "tunnel", 
+                        "net_name": "vxlan", 
+                        "range": "10000:40000", 
+                        "type": "vxlan"
+                    }
+                }, 
+                {
+                    "network": {
+                        "container_bridge": "br-vlan", 
+                        "container_interface": "eth12", 
+                        "container_type": "veth", 
+                        "group_binds": [
+                            "neutron_linuxbridge_agent"
+                        ], 
+                        "host_bind_override": "em2", 
+                        "net_name": "flat", 
+                        "type": "flat"
+                    }
+                }, 
+                {
+                    "network": {
+                        "container_bridge": "br-storage", 
+                        "container_interface": "eth2", 
+                        "container_mtu": "9000", 
+                        "container_type": "veth", 
+                        "group_binds": [
+                            "glance_api", 
+                            "cinder_api", 
+                            "cinder_volume", 
+                            "nova_compute"
+                        ], 
+                        "ip_from_q": "storage", 
+                        "type": "raw"
+                    }
+                }
+            ], 
+            "tunnel_bridge": "br-vxlan"
+        }
+    }, 
+    "all_containers": {
+        "children": [
+            "metering-compute_containers", 
+            "storage_containers", 
+            "swift-proxy_containers", 
+            "haproxy_containers", 
+            "metering-infra_containers", 
+            "swift_containers", 
+            "ironic-infra_containers", 
+            "ironic-server_containers", 
+            "compute_containers", 
+            "storage-infra_containers", 
+            "metering-alarm_containers", 
+            "shared-infra_containers", 
+            "log_containers", 
+            "infra_containers", 
+            "identity_containers", 
+            "network_containers", 
+            "repo-infra_containers", 
+            "os-infra_containers"
+        ], 
+        "hosts": []
+    }, 
+    "aodh_alarm_evaluator": {
+        "children": [], 
+        "hosts": []
+    }, 
+    "aodh_alarm_notifier": {
+        "children": [], 
+        "hosts": []
+    }, 
+    "aodh_all": {
+        "children": [
+            "aodh_alarm_notifier", 
+            "aodh_api", 
+            "aodh_alarm_evaluator", 
+            "aodh_listener"
+        ], 
+        "hosts": []
+    }, 
+    "aodh_api": {
+        "children": [], 
+        "hosts": []
+    }, 
+    "aodh_container": {
+        "hosts": []
+    }, 
+    "aodh_listener": {
+        "children": [], 
+        "hosts": []
+    }, 
+    "ceilometer_agent_central": {
+        "children": [], 
+        "hosts": []
+    }, 
+    "ceilometer_agent_compute": {
+        "children": [], 
+        "hosts": []
+    }, 
+    "ceilometer_agent_notification": {
+        "children": [], 
+        "hosts": []
+    }, 
+    "ceilometer_all": {
+        "children": [
+            "ceilometer_agent_central", 
+            "ceilometer_agent_notification", 
+            "ceilometer_api", 
+            "ceilometer_collector", 
+            "ceilometer_agent_compute"
+        ], 
+        "hosts": []
+    }, 
+    "ceilometer_api": {
+        "children": [], 
+        "hosts": []
+    }, 
+    "ceilometer_api_container": {
+        "hosts": []
+    }, 
+    "ceilometer_collector": {
+        "children": [], 
+        "hosts": []
+    }, 
+    "ceilometer_collector_container": {
+        "hosts": []
+    }, 
+    "cinder_all": {
+        "children": [
+            "cinder_api", 
+            "cinder_backup", 
+            "cinder_volume", 
+            "cinder_scheduler"
+        ], 
+        "hosts": []
+    }, 
+    "cinder_api": {
+        "children": [], 
+        "hosts": [
+            "loc-cntl_cinder_api_container-283559f3"
+        ]
+    }, 
+    "cinder_api_container": {
+        "hosts": [
+            "loc-cntl_cinder_api_container-283559f3"
+        ]
+    }, 
+    "cinder_backup": {
+        "children": [], 
+        "hosts": []
+    }, 
+    "cinder_scheduler": {
+        "children": [], 
+        "hosts": [
+            "loc-cntl_cinder_scheduler_container-6697b0b4"
+        ]
+    }, 
+    "cinder_scheduler_container": {
+        "hosts": [
+            "loc-cntl_cinder_scheduler_container-6697b0b4"
+        ]
+    }, 
+    "cinder_volume": {
+        "children": [], 
+        "hosts": []
+    }, 
+    "cinder_volumes_container": {
+        "hosts": []
+    }, 
+    "compute_all": {
+        "hosts": [
+            "loc-cmp"
+        ]
+    }, 
+    "compute_containers": {
+        "children": [
+            "loc-cmp_containers"
+        ], 
+        "hosts": []
+    }, 
+    "compute_hosts": {
+        "hosts": [
+            "loc-cmp"
+        ]
+    }, 
+    "galera": {
+        "children": [], 
+        "hosts": [
+            "loc-cntl_galera_container-33501562"
+        ]
+    }, 
+    "galera_all": {
+        "children": [
+            "galera"
+        ], 
+        "hosts": []
+    }, 
+    "galera_container": {
+        "hosts": [
+            "loc-cntl_galera_container-33501562"
+        ]
+    }, 
+    "glance_all": {
+        "children": [
+            "glance_registry", 
+            "glance_api"
+        ], 
+        "hosts": []
+    }, 
+    "glance_api": {
+        "children": [], 
+        "hosts": [
+            "loc-cntl_glance_container-a6e85be3"
+        ]
+    }, 
+    "glance_container": {
+        "hosts": [
+            "loc-cntl_glance_container-a6e85be3"
+        ]
+    }, 
+    "glance_registry": {
+        "children": [], 
+        "hosts": [
+            "loc-cntl_glance_container-a6e85be3"
+        ]
+    }, 
+    "haproxy": {
+        "children": [], 
+        "hosts": [
+            "loc-cntl"
+        ]
+    }, 
+    "haproxy_all": {
+        "children": [
+            "haproxy"
+        ], 
+        "hosts": [
+            "loc-cntl"
+        ]
+    }, 
+    "haproxy_container": {
+        "hosts": []
+    }, 
+    "haproxy_containers": {
+        "children": [
+            "loc-cntl_containers"
+        ], 
+        "hosts": []
+    }, 
+    "haproxy_hosts": {
+        "hosts": [
+            "loc-cntl"
+        ]
+    }, 
+    "heat_all": {
+        "children": [
+            "heat_api", 
+            "heat_engine", 
+            "heat_api_cloudwatch", 
+            "heat_api_cfn"
+        ], 
+        "hosts": []
+    }, 
+    "heat_api": {
+        "children": [], 
+        "hosts": [
+            "loc-cntl_heat_apis_container-ef78782b"
+        ]
+    }, 
+    "heat_api_cfn": {
+        "children": [], 
+        "hosts": [
+            "loc-cntl_heat_apis_container-ef78782b"
+        ]
+    }, 
+    "heat_api_cloudwatch": {
+        "children": [], 
+        "hosts": [
+            "loc-cntl_heat_apis_container-ef78782b"
+        ]
+    }, 
+    "heat_apis_container": {
+        "hosts": [
+            "loc-cntl_heat_apis_container-ef78782b"
+        ]
+    }, 
+    "heat_engine": {
+        "children": [], 
+        "hosts": [
+            "loc-cntl_heat_engine_container-52c07992"
+        ]
+    }, 
+    "heat_engine_container": {
+        "hosts": [
+            "loc-cntl_heat_engine_container-52c07992"
+        ]
+    }, 
+    "horizon": {
+        "children": [], 
+        "hosts": [
+            "loc-cntl_horizon_container-c8a6fa25"
+        ]
+    }, 
+    "horizon_all": {
+        "children": [
+            "horizon"
+        ], 
+        "hosts": []
+    }, 
+    "horizon_container": {
+        "hosts": [
+            "loc-cntl_horizon_container-c8a6fa25"
+        ]
+    }, 
+    "hosts": {
+        "children": [
+            "storage_hosts", 
+            "os-infra_hosts", 
+            "ironic-server_hosts", 
+            "network_hosts", 
+            "log_hosts", 
+            "infra_hosts", 
+            "swift-proxy_hosts", 
+            "metering-alarm_hosts", 
+            "metering-infra_hosts", 
+            "compute_hosts", 
+            "swift_hosts", 
+            "identity_hosts", 
+            "repo-infra_hosts", 
+            "metering-compute_hosts", 
+            "shared-infra_hosts", 
+            "ironic-infra_hosts", 
+            "storage-infra_hosts", 
+            "haproxy_hosts"
+        ], 
+        "hosts": []
+    }, 
+    "identity_all": {
+        "hosts": [
+            "loc-cntl", 
+            "loc-cntl_keystone_container-ce993ac7"
+        ]
+    }, 
+    "identity_containers": {
+        "children": [
+            "loc-cntl_containers"
+        ], 
+        "hosts": []
+    }, 
+    "identity_hosts": {
+        "hosts": [
+            "loc-cntl"
+        ]
+    }, 
+    "infra_containers": {
+        "children": [], 
+        "hosts": []
+    }, 
+    "infra_hosts": {
+        "children": [], 
+        "hosts": []
+    }, 
+    "ironic-infra_containers": {
+        "children": [], 
+        "hosts": []
+    }, 
+    "ironic-infra_hosts": {
+        "children": [], 
+        "hosts": []
+    }, 
+    "ironic-server_containers": {
+        "children": [], 
+        "hosts": []
+    }, 
+    "ironic-server_hosts": {
+        "children": [], 
+        "hosts": []
+    }, 
+    "ironic_all": {
+        "children": [
+            "ironic_api", 
+            "ironic_conductor"
+        ], 
+        "hosts": []
+    }, 
+    "ironic_api": {
+        "children": [], 
+        "hosts": []
+    }, 
+    "ironic_api_container": {
+        "hosts": []
+    }, 
+    "ironic_conductor": {
+        "children": [], 
+        "hosts": []
+    }, 
+    "ironic_conductor_container": {
+        "hosts": []
+    }, 
+    "ironic_server": {
+        "children": [], 
+        "hosts": []
+    }, 
+    "ironic_server_container": {
+        "hosts": []
+    }, 
+    "ironic_servers": {
+        "children": [
+            "ironic_server"
+        ], 
+        "hosts": []
+    }, 
+    "keystone": {
+        "children": [], 
+        "hosts": [
+            "loc-cntl_keystone_container-ce993ac7"
+        ]
+    }, 
+    "keystone_all": {
+        "children": [
+            "keystone"
+        ], 
+        "hosts": []
+    }, 
+    "keystone_container": {
+        "hosts": [
+            "loc-cntl_keystone_container-ce993ac7"
+        ]
+    }, 
+    "loc-cntl_containers": {
+        "hosts": [
+            "loc-cntl_nova_scheduler_container-053ab198", 
+            "loc-cntl_horizon_container-c8a6fa25", 
+            "loc-cntl_utility_container-75303553", 
+            "loc-cntl_keystone_container-ce993ac7", 
+            "loc-cntl_nova_cert_container-27cc0f1e", 
+            "loc-cntl_cinder_scheduler_container-6697b0b4", 
+            "loc-cntl_neutron_server_container-384340bb", 
+            "loc-cntl_repo_container-80a259dd", 
+            "loc-cntl_glance_container-a6e85be3", 
+            "loc-cntl_neutron_agents_container-62559f3c", 
+            "loc-cntl_nova_api_os_compute_container-91aebb3c", 
+            "loc-cntl_nova_api_metadata_container-5ca03db3", 
+            "loc-cntl_memcached_container-6ed71242", 
+            "loc-cntl_cinder_api_container-283559f3", 
+            "loc-cntl_galera_container-33501562", 
+            "loc-cntl_nova_conductor_container-b7477f30", 
+            "loc-cntl_rsyslog_container-ba0ebdb9", 
+            "loc-cntl_rabbit_mq_container-84c7f2f5", 
+            "loc-cntl_nova_console_container-536ee83d", 
+            "loc-cntl_heat_apis_container-ef78782b", 
+            "loc-cntl_heat_engine_container-52c07992"
+        ]
+    }, 
+    "log_all": {
+        "hosts": [
+            "loc-cntl", 
+            "loc-cntl_rsyslog_container-ba0ebdb9"
+        ]
+    }, 
+    "log_containers": {
+        "children": [
+            "loc-cntl_containers"
+        ], 
+        "hosts": []
+    }, 
+    "log_hosts": {
+        "hosts": [
+            "loc-cntl"
+        ]
+    }, 
+    "memcached": {
+        "children": [], 
+        "hosts": [
+            "loc-cntl_memcached_container-6ed71242"
+        ]
+    }, 
+    "memcached_all": {
+        "children": [
+            "memcached"
+        ], 
+        "hosts": []
+    }, 
+    "memcached_container": {
+        "hosts": [
+            "loc-cntl_memcached_container-6ed71242"
+        ]
+    }, 
+    "metering-alarm_containers": {
+        "children": [], 
+        "hosts": []
+    }, 
+    "metering-alarm_hosts": {
+        "children": [], 
+        "hosts": []
+    }, 
+    "metering-compute_container": {
+        "hosts": []
+    }, 
+    "metering-compute_containers": {
+        "children": [], 
+        "hosts": []
+    }, 
+    "metering-compute_hosts": {
+        "children": [], 
+        "hosts": []
+    }, 
+    "metering-infra_containers": {
+        "children": [], 
+        "hosts": []
+    }, 
+    "metering-infra_hosts": {
+        "children": [], 
+        "hosts": []
+    }, 
+    "network_all": {
+        "hosts": [
+            "loc-cntl", 
+            "loc-cntl_neutron_server_container-384340bb", 
+            "loc-cntl_neutron_agents_container-62559f3c"
+        ]
+    }, 
+    "network_containers": {
+        "children": [
+            "loc-cntl_containers"
+        ], 
+        "hosts": []
+    }, 
+    "network_hosts": {
+        "hosts": [
+            "loc-cntl"
+        ]
+    }, 
+    "neutron_agent": {
+        "children": [], 
+        "hosts": [
+            "loc-cntl_neutron_agents_container-62559f3c"
+        ]
+    }, 
+    "neutron_agents_container": {
+        "hosts": [
+            "loc-cntl_neutron_agents_container-62559f3c"
+        ]
+    }, 
+    "neutron_all": {
+        "children": [
+            "neutron_agent", 
+            "neutron_metadata_agent", 
+            "neutron_dhcp_agent", 
+            "neutron_l3_agent", 
+            "neutron_linuxbridge_agent", 
+            "neutron_metering_agent", 
+            "neutron_lbaas_agent", 
+            "neutron_server"
+        ], 
+        "hosts": []
+    }, 
+    "neutron_dhcp_agent": {
+        "children": [], 
+        "hosts": [
+            "loc-cntl_neutron_agents_container-62559f3c"
+        ]
+    }, 
+    "neutron_l3_agent": {
+        "children": [], 
+        "hosts": [
+            "loc-cntl_neutron_agents_container-62559f3c"
+        ]
+    }, 
+    "neutron_lbaas_agent": {
+        "children": [], 
+        "hosts": [
+            "loc-cntl_neutron_agents_container-62559f3c"
+        ]
+    }, 
+    "neutron_linuxbridge_agent": {
+        "children": [], 
+        "hosts": [
+            "loc-cntl_neutron_agents_container-62559f3c", 
+            "loc-cmp"
+        ]
+    }, 
+    "neutron_metadata_agent": {
+        "children": [], 
+        "hosts": [
+            "loc-cntl_neutron_agents_container-62559f3c"
+        ]
+    }, 
+    "neutron_metering_agent": {
+        "children": [], 
+        "hosts": [
+            "loc-cntl_neutron_agents_container-62559f3c"
+        ]
+    }, 
+    "neutron_server": {
+        "children": [], 
+        "hosts": [
+            "loc-cntl_neutron_server_container-384340bb"
+        ]
+    }, 
+    "neutron_server_container": {
+        "hosts": [
+            "loc-cntl_neutron_server_container-384340bb"
+        ]
+    }, 
+    "nova_all": {
+        "children": [
+            "nova_console", 
+            "nova_api_metadata", 
+            "nova_cert", 
+            "nova_conductor", 
+            "nova_api_os_compute", 
+            "nova_scheduler", 
+            "nova_compute"
+        ], 
+        "hosts": []
+    }, 
+    "nova_api_metadata": {
+        "children": [], 
+        "hosts": [
+            "loc-cntl_nova_api_metadata_container-5ca03db3"
+        ]
+    }, 
+    "nova_api_metadata_container": {
+        "hosts": [
+            "loc-cntl_nova_api_metadata_container-5ca03db3"
+        ]
+    }, 
+    "nova_api_os_compute": {
+        "children": [], 
+        "hosts": [
+            "loc-cntl_nova_api_os_compute_container-91aebb3c"
+        ]
+    }, 
+    "nova_api_os_compute_container": {
+        "hosts": [
+            "loc-cntl_nova_api_os_compute_container-91aebb3c"
+        ]
+    }, 
+    "nova_cert": {
+        "children": [], 
+        "hosts": [
+            "loc-cntl_nova_cert_container-27cc0f1e"
+        ]
+    }, 
+    "nova_cert_container": {
+        "hosts": [
+            "loc-cntl_nova_cert_container-27cc0f1e"
+        ]
+    }, 
+    "nova_compute": {
+        "children": [], 
+        "hosts": [
+            "loc-cmp"
+        ]
+    }, 
+    "nova_compute_container": {
+        "hosts": []
+    }, 
+    "nova_conductor": {
+        "children": [], 
+        "hosts": [
+            "loc-cntl_nova_conductor_container-b7477f30"
+        ]
+    }, 
+    "nova_conductor_container": {
+        "hosts": [
+            "loc-cntl_nova_conductor_container-b7477f30"
+        ]
+    }, 
+    "nova_console": {
+        "children": [], 
+        "hosts": [
+            "loc-cntl_nova_console_container-536ee83d"
+        ]
+    }, 
+    "nova_console_container": {
+        "hosts": [
+            "loc-cntl_nova_console_container-536ee83d"
+        ]
+    }, 
+    "nova_scheduler": {
+        "children": [], 
+        "hosts": [
+            "loc-cntl_nova_scheduler_container-053ab198"
+        ]
+    }, 
+    "nova_scheduler_container": {
+        "hosts": [
+            "loc-cntl_nova_scheduler_container-053ab198"
+        ]
+    }, 
+    "os-infra_all": {
+        "hosts": [
+            "loc-cntl", 
+            "loc-cntl_nova_scheduler_container-053ab198", 
+            "loc-cntl_horizon_container-c8a6fa25", 
+            "loc-cntl_nova_cert_container-27cc0f1e", 
+            "loc-cntl_glance_container-a6e85be3", 
+            "loc-cntl_nova_api_os_compute_container-91aebb3c", 
+            "loc-cntl_nova_api_metadata_container-5ca03db3", 
+            "loc-cntl_nova_conductor_container-b7477f30", 
+            "loc-cntl_nova_console_container-536ee83d", 
+            "loc-cntl_heat_apis_container-ef78782b", 
+            "loc-cntl_heat_engine_container-52c07992"
+        ]
+    }, 
+    "os-infra_containers": {
+        "children": [
+            "loc-cntl_containers"
+        ], 
+        "hosts": []
+    }, 
+    "os-infra_hosts": {
+        "hosts": [
+            "loc-cntl"
+        ]
+    }, 
+    "pkg_repo": {
+        "children": [], 
+        "hosts": [
+            "loc-cntl_repo_container-80a259dd"
+        ]
+    }, 
+    "rabbit_mq_container": {
+        "hosts": [
+            "loc-cntl_rabbit_mq_container-84c7f2f5"
+        ]
+    }, 
+    "rabbitmq": {
+        "children": [], 
+        "hosts": [
+            "loc-cntl_rabbit_mq_container-84c7f2f5"
+        ]
+    }, 
+    "rabbitmq_all": {
+        "children": [
+            "rabbitmq"
+        ], 
+        "hosts": []
+    }, 
+    "remote": {
+        "children": [
+            "swift-remote_hosts"
+        ], 
+        "hosts": []
+    }, 
+    "remote_containers": {
+        "children": [
+            "swift-remote_containers"
+        ], 
+        "hosts": []
+    }, 
+    "repo-infra_all": {
+        "hosts": [
+            "loc-cntl", 
+            "loc-cntl_repo_container-80a259dd"
+        ]
+    }, 
+    "repo-infra_containers": {
+        "children": [
+            "loc-cntl_containers"
+        ], 
+        "hosts": []
+    }, 
+    "repo-infra_hosts": {
+        "hosts": [
+            "loc-cntl"
+        ]
+    }, 
+    "repo_all": {
+        "children": [
+            "pkg_repo"
+        ], 
+        "hosts": []
+    }, 
+    "repo_container": {
+        "hosts": [
+            "loc-cntl_repo_container-80a259dd"
+        ]
+    }, 
+    "rsyslog": {
+        "children": [], 
+        "hosts": [
+            "loc-cntl_rsyslog_container-ba0ebdb9"
+        ]
+    }, 
+    "rsyslog_all": {
+        "children": [
+            "rsyslog"
+        ], 
+        "hosts": []
+    }, 
+    "rsyslog_container": {
+        "hosts": [
+            "loc-cntl_rsyslog_container-ba0ebdb9"
+        ]
+    }, 
+    "shared-infra_all": {
+        "hosts": [
+            "loc-cntl", 
+            "loc-cntl_utility_container-75303553", 
+            "loc-cntl_memcached_container-6ed71242", 
+            "loc-cntl_galera_container-33501562", 
+            "loc-cntl_rabbit_mq_container-84c7f2f5"
+        ]
+    }, 
+    "shared-infra_containers": {
+        "children": [
+            "loc-cntl_containers"
+        ], 
+        "hosts": []
+    }, 
+    "shared-infra_hosts": {
+        "hosts": [
+            "loc-cntl"
+        ]
+    }, 
+    "storage-infra_all": {
+        "hosts": [
+            "loc-cntl", 
+            "loc-cntl_cinder_scheduler_container-6697b0b4", 
+            "loc-cntl_cinder_api_container-283559f3"
+        ]
+    }, 
+    "storage-infra_containers": {
+        "children": [
+            "loc-cntl_containers"
+        ], 
+        "hosts": []
+    }, 
+    "storage-infra_hosts": {
+        "hosts": [
+            "loc-cntl"
+        ]
+    }, 
+    "storage_containers": {
+        "children": [], 
+        "hosts": []
+    }, 
+    "storage_hosts": {
+        "children": [], 
+        "hosts": []
+    }, 
+    "swift-proxy_containers": {
+        "children": [], 
+        "hosts": []
+    }, 
+    "swift-proxy_hosts": {
+        "children": [], 
+        "hosts": []
+    }, 
+    "swift-remote_containers": {
+        "children": [], 
+        "hosts": []
+    }, 
+    "swift-remote_hosts": {
+        "children": [], 
+        "hosts": []
+    }, 
+    "swift_acc": {
+        "children": [], 
+        "hosts": []
+    }, 
+    "swift_acc_container": {
+        "hosts": []
+    }, 
+    "swift_all": {
+        "children": [
+            "swift_proxy", 
+            "swift_cont", 
+            "swift_acc", 
+            "swift_obj"
+        ], 
+        "hosts": []
+    }, 
+    "swift_cont": {
+        "children": [], 
+        "hosts": []
+    }, 
+    "swift_cont_container": {
+        "hosts": []
+    }, 
+    "swift_containers": {
+        "children": [], 
+        "hosts": []
+    }, 
+    "swift_hosts": {
+        "children": [], 
+        "hosts": []
+    }, 
+    "swift_obj": {
+        "children": [], 
+        "hosts": []
+    }, 
+    "swift_obj_container": {
+        "hosts": []
+    }, 
+    "swift_proxy": {
+        "children": [], 
+        "hosts": []
+    }, 
+    "swift_proxy_container": {
+        "hosts": []
+    }, 
+    "swift_remote": {
+        "children": [], 
+        "hosts": []
+    }, 
+    "swift_remote_all": {
+        "children": [
+            "swift_remote"
+        ], 
+        "hosts": []
+    }, 
+    "swift_remote_container": {
+        "hosts": []
+    }, 
+    "utility": {
+        "children": [], 
+        "hosts": [
+            "loc-cntl_utility_container-75303553"
+        ]
+    }, 
+    "utility_all": {
+        "children": [
+            "utility"
+        ], 
+        "hosts": []
+    }, 
+    "utility_container": {
+        "hosts": [
+            "loc-cntl_utility_container-75303553"
+        ]
+    }
+}
